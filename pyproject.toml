@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "huggingface-summarizer-nicegui"
+version = "0.1.0"
+description = "A NiceGUI-based web app for text summarization using Hugging Face and the MVC design pattern."
+authors = ["Azim Givron <azimgivron@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/azimgivron/summarizer-app.git"
+repository = "https://github.com/azimgivron/summarizer-app.git"
+keywords = ["huggingface", "nicegui", "text summarization", "AI", "MVC"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+transformers = "^4.33.0"
+nicegui = "^1.2.0"
+
+[build-system]
+requires = ["poetry>=1.2"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+huggingface-summarizer = "main:main"
