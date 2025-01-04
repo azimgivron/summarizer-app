@@ -19,7 +19,7 @@ A modular and user-friendly web app for text summarization built using **NiceGUI
 
 2. **Start the app**:
    ```bash
-   python -m summarizer-app.main
+   python summarizer-app/main.py
    ```
 
 3. **Access the web interface**:

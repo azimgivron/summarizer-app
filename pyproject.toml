@@ -1,22 +1,31 @@
-[tool.poetry]
-name = "huggingface-summarizer-nicegui"
+[project]
+name = "summarizer"
 version = "0.1.0"
 description = "A NiceGUI-based web app for text summarization using Hugging Face and the MVC design pattern."
-authors = ["Azim Givron <azimgivron@gmail.com>"]
-license = "MIT"
+authors = [
+    { name = "Azim Givron", email = "azimgivron@gmail.com" }
+]
+license = { text = "MIT" }
 readme = "README.md"
-homepage = "https://github.com/azimgivron/summarizer-app.git"
-repository = "https://github.com/azimgivron/summarizer-app.git"
 keywords = ["huggingface", "nicegui", "text summarization", "AI", "MVC"]
+classifiers = [
+    "Programming Language :: Python :: 3.11"
+]
+requires-python = ">=3.11"
 
-[tool.poetry.dependencies]
-python = "^3.8"
-transformers = "^4.33.0"
-nicegui = "^1.2.0"
+[project.urls]
+Homepage = "https://github.com/azimgivron/summarizer-app.git"
+Repository = "https://github.com/azimgivron/summarizer-app.git"
 
 [build-system]
-requires = ["poetry>=1.2"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
-[tool.poetry.scripts]
-huggingface-summarizer = "main:main"
+[tool.setuptools.packages.find]
+include = ["summarizer"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = "requirements.txt" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

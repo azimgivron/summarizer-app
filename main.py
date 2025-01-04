@@ -1,7 +1,7 @@
 from nicegui import ui
-from app.controller import TextSummarizerController
+from summarizer.controller import TextSummarizerController
 
-if __name__ == "__main__":
+def main():
     """
     Entry point for the text summarization app.
 
@@ -10,3 +10,6 @@ if __name__ == "__main__":
     controller = TextSummarizerController()
     controller.run()
     ui.run(title="Hugging Face Summarizer", port=8080)
+
+if __name__ in {"__main__", "__mp_main__"}:
+    main()

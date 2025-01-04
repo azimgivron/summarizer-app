@@ -13,6 +13,7 @@ class TextSummarizerController:
         """Handle the summarization logic by fetching input, processing it, and updating the view."""
         input_text = self.view.get_input_text()
         summary = self.model.summarize(input_text)
+        print(summary)
         self.view.display_summary(summary)
 
     def run(self) -> None:

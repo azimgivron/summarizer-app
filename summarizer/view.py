@@ -20,7 +20,7 @@ class TextSummarizerView:
 
         with ui.card().classes("w-1/2 mx-auto mt-5"):
             ui.label("Input Text").classes("text-lg font-medium mb-2")
-            self.input_area = ui.textarea(placeholder="Enter text here...", rows=10).classes("w-full mb-4")
+            self.input_area = ui.textarea(placeholder="Enter text here...").classes("w-full mb-4")
 
             self.output_label = ui.label("Summary will appear here").classes("text-lg font-medium mt-4")
 
