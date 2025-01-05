@@ -1,5 +1,7 @@
+"""Controller module"""
 from .model import TextSummarizer
 from .view import TextSummarizerView
+
 
 class TextSummarizerController:
     """Manages the interaction between the model and view."""
@@ -10,7 +12,8 @@ class TextSummarizerController:
         self.view = TextSummarizerView()
 
     def summarize_text(self) -> None:
-        """Handle the summarization logic by fetching input, processing it, and updating the view."""
+        """Handle the summarization logic by fetching input, processing it,
+        and updating the view."""
         input_text = self.view.get_input_text()
         summary = self.model.summarize(input_text)
         print(summary)

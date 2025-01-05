@@ -1,5 +1,7 @@
+"""View module"""
 from typing import Callable
 from nicegui import ui
+
 
 class TextSummarizerView:
     """Defines the user interface for the text summarization app."""
@@ -14,17 +16,24 @@ class TextSummarizerView:
         Render the user interface.
 
         Args:
-            summarize_callback (Callable[[], None]): The function to call when the summarize button is clicked.
+            summarize_callback (Callable[[], None]): The function to call
+                when the summarize button is clicked.
         """
         ui.label("Text Summarizer").classes("text-2xl font-bold text-center mt-5")
 
         with ui.card().classes("w-1/2 mx-auto mt-5"):
             ui.label("Input Text").classes("text-lg font-medium mb-2")
-            self.input_area = ui.textarea(placeholder="Enter text here...").classes("w-full mb-4")
+            self.input_area = ui.textarea(placeholder="Enter text here...").classes(
+                "w-full mb-4"
+            )
 
-            self.output_label = ui.label("Summary will appear here").classes("text-lg font-medium mt-4")
+            self.output_label = ui.label("Summary will appear here").classes(
+                "text-lg font-medium mt-4"
+            )
 
-            ui.button("Summarize", on_click=summarize_callback).classes("mt-4 bg-blue-500 text-white rounded-lg px-4 py-2")
+            ui.button("Summarize", on_click=summarize_callback).classes(
+                "mt-4 bg-blue-500 text-white rounded-lg px-4 py-2"
+            )
 
     def get_input_text(self) -> str:
         """

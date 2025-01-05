@@ -1,4 +1,6 @@
+"""Model module"""
 from transformers import pipeline
+
 
 class TextSummarizer:
     """Handles text summarization using Hugging Face's Transformers library."""
@@ -40,7 +42,9 @@ class TextSummarizer:
 
         return chunks
 
-    def summarize(self, text: str, min_ratio: float = 0.3, max_ratio: float = 0.5) -> str:
+    def summarize(
+        self, text: str, min_ratio: float = 0.3, max_ratio: float = 0.5
+    ) -> str:
         """
         Summarize the given text.
 
@@ -52,6 +56,7 @@ class TextSummarizer:
         Returns:
             str: The summarized text or an error message if the operation fails.
         """
+        # pylint: disable=W0718
         if not text.strip():
             return "Please provide input text to summarize."
 
@@ -75,6 +80,5 @@ class TextSummarizer:
             # Combine all summaries
             return " ".join(summaries)
 
-        except Exception as e:
-            return f"An error occurred: {e}"
-
+        except Exception as error_msg:
+            return f"An error occurred: {error_msg}"
