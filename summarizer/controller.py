@@ -4,7 +4,14 @@ from .view import TextSummarizerView
 
 
 class TextSummarizerController:
-    """Manages the interaction between the model and view."""
+    """
+    Manages the interaction between the model and view.
+
+    Attributes:
+        model (TextSummarizer): The model responsible for text summarization.
+        view (TextSummarizerView): The view responsible for handling user input
+            and displaying the summary.
+    """
 
     def __init__(self) -> None:
         """Initialize the controller with a model and a view."""
@@ -16,7 +23,6 @@ class TextSummarizerController:
         and updating the view."""
         input_text = self.view.get_input_text()
         summary = self.model.summarize(input_text)
-        print(summary)
         self.view.display_summary(summary)
 
     def run(self) -> None:

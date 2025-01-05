@@ -5,7 +5,13 @@ from nicegui import ui
 
 
 class TextSummarizerView:
-    """Defines the user interface for the text summarization app."""
+    """
+    Defines the user interface for the text summarization app.
+
+    Attributes:
+        input_area (nicegui.elements.TextArea): The text area where the user inputs text.
+        output_label (nicegui.elements.Label): The label where the summarized text is displayed.
+    """
 
     def __init__(self) -> None:
         """Initialize UI components."""

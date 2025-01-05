@@ -3,7 +3,13 @@ from transformers import pipeline
 
 
 class TextSummarizer:
-    """Handles text summarization using Hugging Face's Transformers library."""
+    """
+    Handles text summarization using Hugging Face's Transformers library.
+
+    Attributes:
+        summarizer (transformers.pipelines.Pipeline): The Hugging Face summarization pipeline.
+        max_tokens (int): Maximum number of tokens supported by the model for each input chunk.
+    """
 
     def __init__(self, max_tokens: int = 1024) -> None:
         """
