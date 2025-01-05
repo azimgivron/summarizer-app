@@ -38,7 +38,7 @@ RUN python3 -m venv $VENV_PATH && \
     $VENV_PATH/bin/pip install --upgrade pip
 
 # Add virtual environment activation to Zsh
-RUN echo "source $VENV_PATH/bin/activate" >> /home/$USERNAME/.zshrc
+RUN echo "alias activate=$VENV_PATH/bin/activate" >> /home/$USERNAME/.zshrc
 
 # Expose application port
 EXPOSE 8080
