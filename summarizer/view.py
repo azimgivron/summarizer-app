@@ -1,5 +1,6 @@
 """View module"""
 from typing import Callable
+
 from nicegui import ui
 
 

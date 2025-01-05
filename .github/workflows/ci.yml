@@ -27,11 +27,11 @@ jobs:
           pip install pylint black
 
       - name: Run Black
-        run: black --check app/
+        run: black --check summarizer/
 
       - name: Run Pylint
         run: |
-          pylint $(find app/ -name "*.py" -o -name "*.py")
+          pylint $(find summarizer/ -name "*.py" -o -name "*.py")
 
   test:
     name: Run Unit Tests
