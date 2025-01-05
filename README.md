@@ -1,5 +1,7 @@
 # Hugging Face Text Summarizer (NiceGUI + MVC)
 
+[![codecov](https://codecov.io/gh/azimgivron/summarizer-app/graph/badge.svg?token=VGSWP6FAK8)](https://codecov.io/gh/azimgivron/summarizer-app)
+
 A modular and user-friendly web app for text summarization built using **NiceGUI** and **Hugging Face Transformers**, following the **Model-View-Controller (MVC)** design pattern. This project demonstrates the potential of AI-powered text summarization in a clean and maintainable structure.
 
 ## Features
